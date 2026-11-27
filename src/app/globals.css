@@ -3,5 +3,30 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-geist-sans), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+}
+
+/*
+ * 배경: 아이스 화이트 → 연한 하늘색 그라데이션 + 은은한 빛 번짐.
+ * 글래스 카드가 비쳐 보이도록 고정 레이어로 깔아 둡니다.
+ * (background-attachment: fixed는 iOS에서 동작하지 않아 pseudo-element 사용)
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(40rem 30rem at 85% 10%, rgba(147, 197, 253, 0.55), transparent 70%),
+    radial-gradient(36rem 28rem at 10% 90%, rgba(165, 243, 252, 0.5), transparent 70%),
+    linear-gradient(160deg, #f5f9ff 0%, #e6f0fd 50%, #d4e4fa 100%);
+}
+
+.dark body::before {
+  background:
+    radial-gradient(40rem 30rem at 85% 10%, rgba(59, 130, 246, 0.22), transparent 70%),
+    radial-gradient(36rem 28rem at 10% 90%, rgba(34, 211, 238, 0.14), transparent 70%),
+    linear-gradient(160deg, #0b1220 0%, #0f1a2e 50%, #13223d 100%);
 }

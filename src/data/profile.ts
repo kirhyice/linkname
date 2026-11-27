@@ -13,12 +13,12 @@ export type Profile = {
 
 // 내 프로필과 링크 목록 — 여기만 수정하면 페이지에 반영됩니다.
 export const profile: Profile = {
-  name: "질풍노도Ai",
-  bio: "아직도 호기심 많은 개발자",
-  imageUrl: undefined, // 예: "/profile.jpg" (public 폴더에 이미지 추가)
+  name: "Byron Lee",
+  bio: "SAS Consultant | Ai가 재밌다",
+  imageUrl: "/profile.jpg",
   links: [
     { id: "github", title: "GitHub", url: "https://github.com/" },
-    { id: "blog", title: "블로그", url: "https://example.com/blog" },
-    { id: "instagram", title: "Instagram", url: "https://instagram.com/" },
+    { id: "facebook", title: "Facebook", url: "https://www.facebook.com/jaesung.lee.7587" },
+    { id: "email", title: "이메일", url: "mailto:kirhyice@gmail.com" },
   ],
 };
